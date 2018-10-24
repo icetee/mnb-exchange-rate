@@ -1,0 +1,21 @@
+{
+  "name": "icetee/mnb-exchange-rate",
+  "description": "Minimal SOAP API wrapper for get exchanges rate from MNB",
+  "type": "library",
+  "license": "MIT",
+  "authors": [{
+    "name": "Tamás András Horváth",
+    "email": "htomy92@gmail.com"
+  }],
+  "autoload": {
+    "psr-4": {
+      "Icetee\\MNB\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.3"
+  }
+}
