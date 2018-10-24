@@ -101,5 +101,5 @@ The properties of `RateEntityCollection`:
 
 ### Reference
 
-<http://www.mnb.hu/arfolyamok>
+<http://www.mnb.hu/arfolyamok>  
 <https://www.mnb.hu/letoltes/aktualis-es-a-regebbi-arfolyamok-webszolgaltatasanak-dokumentacioja-1.pdf>
