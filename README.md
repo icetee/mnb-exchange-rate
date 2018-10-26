@@ -14,7 +14,7 @@ The simplest solution is to call the package when using a composer. This cli com
 
 **Get current exchange entity by currency:**
 
-    $rate_entity = $exchange_rate->getExchangeRateValue('USD');
+    $rate_entity = $exchange_rate->getCurrentExchangeRate('USD');
 
 The properties of `RateEntity`:
 

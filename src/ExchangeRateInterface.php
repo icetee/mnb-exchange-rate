@@ -10,5 +10,5 @@ interface ExchangeRateInterface
     public function getCurrencyUnits($currencyNames = null);
     public function getDateInterval();
     public function getExchangeRates($startDate = null, $endDate = null, $currencyNames = null);
-    public function getInfo() : Object;
+    public function getInfo();
 }
