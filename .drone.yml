@@ -1,0 +1,23 @@
+---
+kind: pipeline
+name: default
+
+branches:
+  - master
+  - develop
+
+steps:
+- name: test
+  image: php/7.3.0-cli-apline3.8
+  commands:
+    - composer install
+    - composer test
+
+- name: notification
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/${HOOK_KEY}
+    channel: notification
+  environment:
+    HOOK_KEY:
+      from_secret: hook_key
