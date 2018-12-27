@@ -7,6 +7,9 @@
     "name": "Tamás András Horváth",
     "email": "htomy92@gmail.com"
   }],
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
   "autoload": {
     "psr-4": {
       "Icetee\\MNB\\": "src/"

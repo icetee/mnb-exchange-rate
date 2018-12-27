@@ -1,5 +1,7 @@
 # MNB - Exchange Rate
 
+[![Build Status](https://drone.webmonkey.hu/api/badges/icetee/mnb-exchange-rate/status.svg)](https://drone.webmonkey.hu/icetee/mnb-exchange-rate)
+
 ### Load with composer
 
 The simplest solution is to call the package when using a composer. This cli command, install the package.

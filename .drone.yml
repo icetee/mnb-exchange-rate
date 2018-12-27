@@ -1,0 +1,32 @@
+---
+kind: pipeline
+name: default
+
+branches:
+  - master
+  - develop
+
+steps:
+- name: install
+  image: composer
+  commands:
+  - composer install
+
+- name: test
+  image: php:7.3.0-cli-alpine3.8
+  commands:
+    - apk add --no-cache --virtual .persistent-deps icu-dev libxml2-dev
+    - docker-php-ext-configure xml --enable-xml
+    - docker-php-ext-configure intl --enable-intl
+    - docker-php-ext-configure soap --enable-soap
+    - docker-php-ext-install xml
+    - docker-php-ext-install intl
+    - docker-php-ext-install soap
+    - vendor/bin/phpunit
+
+- name: notification
+  image: plugins/slack
+  settings:
+    webhook:
+      from_secret: slack_webhook
+    channel: notifications
